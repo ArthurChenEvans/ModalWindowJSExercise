@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    font-family: Carlito;
+    margin: 0;
 }
 
 body {
@@ -8,21 +10,48 @@ body {
 }
 
 .container {
+    width: 100%;
+    position: absolute;
+    margin-top: 1.25em;
     display: flex;
     justify-content: space-around;
 }
 
-p {
+.hidden {
+    display: none;
+}
+
+button {
+    font-size: 1.75em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
     background-color: white;
     padding: 1em 2em;
     border-radius: 30px;
+    border: none;
 }
 
-p:hover {
+button:hover {
     animation-name: grow;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     cursor: pointer
+}
+
+.modal-container {
+    background-color: rgba(0,0,0, 50%);
+    backdrop-filter: blur(2px);
+    height: 100vh;
+}
+
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: white;
+    padding: 1.5em;
 }
 
 @keyframes grow {
