@@ -1,3 +1,6 @@
 "use strict";
 
-const modals = document.querySelectorAll(".modal");
+const modal = document.querySelector(".modal");
+const modalWindow = document.querySelector(".model-container")
+
+console.log(modal)
